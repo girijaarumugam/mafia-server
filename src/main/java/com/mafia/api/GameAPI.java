@@ -19,7 +19,6 @@ public class GameAPI
 {
 
     @GET
-    @Path("/")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAllGames() {
         System.out.println("***** inside get all games *******");
@@ -30,7 +29,6 @@ public class GameAPI
 
 
     @POST
-    @Path("/")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public Response createGame(String content)

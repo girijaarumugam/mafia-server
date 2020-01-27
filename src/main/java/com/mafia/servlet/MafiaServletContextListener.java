@@ -1,5 +1,7 @@
 package com.mafia.servlet;
 
+//import com.mafia.persistence.util.HibernateUtil;
+
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
@@ -10,10 +12,12 @@ public class MafiaServletContextListener implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent sce) {
         System.out.println("********************** Inside Context Initialized ******************************");
+        //Initialise DB connection
     }
 
     @Override
     public void contextDestroyed(ServletContextEvent sce) {
         System.out.println("**************************** Inside Context Destroyed ****************************");
+        //Close the DB connection
     }
 }

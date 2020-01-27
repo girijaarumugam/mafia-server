@@ -13,15 +13,29 @@ ext {
     jerseyVersion = '2.26'
 }
 
+//TODO set resource
+//sourceSets {
+//    main {
+//        resources {
+//            srcDirs = ['product_package']
+//        }
+//    }
+//}
+
 dependencies {
     compile "org.glassfish.jersey.containers:jersey-container-servlet:$jerseyVersion"
     compile "org.glassfish.jersey.inject:jersey-hk2:$jerseyVersion"
     compile "javax.servlet:javax.servlet-api:4.0.0-b07"
     compile 'org.glassfish.jersey.media:jersey-media-json-jackson:2.14'
 
+//    compile group: 'org.hibernate', name: 'hibernate-gradle-plugin', version: '5.4.10.Final'
+    // https://mvnrepository.com/artifact/org.hibernate/hibernate-annotations
+//    compile group: 'org.hibernate', name: 'hibernate-annotations', version: '3.5.6-Final'
+
+
     compile group: 'org.json', name: 'json', version: '20190722'
 
-    compile "postgresql:postgresql:9.1-901-1.jdbc4"
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.18'
 
     testCompile "junit:junit:4.12"
 }
@@ -32,3 +46,9 @@ gretty {
     servletContainer = 'tomcat8'
     contextPath = '/'
 }
+
+
+//to debug the java code
+//appRun {
+//    jvmArgs=["-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=8080"]
+//}

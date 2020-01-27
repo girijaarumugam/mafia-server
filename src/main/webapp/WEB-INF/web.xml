@@ -15,7 +15,7 @@
 </servlet>
 <servlet-mapping>
     <servlet-name>Jersey Web Application</servlet-name>
-    <url-pattern>/api/v1/*</url-pattern>
+    <url-pattern>/mafia/v1/*</url-pattern>
 </servlet-mapping>
 <listener>
     <listener-class>com.mafia.servlet.MafiaServletContextListener</listener-class>
